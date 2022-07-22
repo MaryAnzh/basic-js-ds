@@ -23,16 +23,10 @@ class Queue {
 
   enqueue(value) {
     if (this.head === null) {
-      this.head = {
-        value: value,
-        next: null,
-      }
+      this.head = new ListNode(value);
       this.tail = this.head;
     } else {
-      this.tail.next = {
-        value: value,
-        next: null,
-      }
+      this.tail.next = new ListNode(value);
       this.tail = this.tail.next;
     }
   }
